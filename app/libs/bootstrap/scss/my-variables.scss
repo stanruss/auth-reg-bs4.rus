@@ -1,0 +1,22 @@
+$default-font: "Montserrat-Medium", sans-serif;
+$extrabold-font: "Montserrat-ExtraBold", sans-serif;
+$bold-font: "algerian", sans-serif;
+$light-font: 'Montserrat-Light', san-serif;
+$semi-font: 'Montserrat-SemiBold', san-serif;
+$black-font: 'Montserrat-Black', san-serif;
+$extraBold-font: 'Montserrat-ExtraBold', san-serif;
+$extraLight-font: 'Montserrat-ExtraLight', san-serif;
+$medium-font: 'Montserrat-Medium', san-serif;
+$thin-font: 'Montserrat-Thin', san-serif;
+
+$theme-colors: (
+  "secondary": #dc3545,
+  "dark": #182129,
+  "primary": #2b52d1,
+  "light": #e2f7ff,
+  "info": #3a8af9,
+  "success": darken(#dc3545,1%)
+);   
+$link-hover-decoration: none;
+$border-color: #dc3545;
+$main-color: #fff
