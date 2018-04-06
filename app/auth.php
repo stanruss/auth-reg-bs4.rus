@@ -34,7 +34,7 @@ $_SESSION["success_messages"] = '';
 
                     // Если капча не верна, то возвращаем пользователя на страницу авторизации, и там выведем ему сообщение об ошибке что он ввёл неправильную капчу.
 
-                        $error_message = "<p class='mesage_error'><strong>Ошибка!</strong> Вы ввели неправильную капчу </p>";
+                        $error_message = "<p class='mesage_error text-secondary'><strong>Ошибка!</strong>&nbsp; Вы ввели неправильную капчу </p>";
 
                     // Сохраняем в сессию сообщение об ошибке. 
                         $_SESSION["error_messages"] = $error_message;
@@ -50,7 +50,7 @@ $_SESSION["success_messages"] = '';
                 }else
                 {
 
-                    $error_message = "<p class='mesage_error'><strong>Ошибка!</strong> Поле для ввода капчи не должна быть пустой. </p>";
+                    $error_message = "<p class='mesage_error text-secondary'><strong>Ошибка!</strong>&nbsp; Поле для ввода капчи не должна быть пустой. </p>";
 
                 // Сохраняем в сессию сообщение об ошибке. 
                     $_SESSION["error_messages"] = $error_message;
@@ -82,7 +82,7 @@ $_SESSION["success_messages"] = '';
                         if( !preg_match($reg_email, $email))
                         {
                         // Сохраняем в сессию сообщение об ошибке. 
-                            $_SESSION["error_messages"] .= "<p class='mesage_error' >Вы ввели неправильный email</p>";
+                            $_SESSION["error_messages"] .= "<p class='mesage_error text-secondary' >Вы ввели неправильный email</p>";
 
                         //Возвращаем пользователя на страницу авторизации
                             header("HTTP/1.1 301 Moved Permanently");
@@ -95,7 +95,7 @@ $_SESSION["success_messages"] = '';
                     }else
                     {
                     // Сохраняем в сессию сообщение об ошибке. 
-                        $_SESSION["error_messages"] .= "<p class='mesage_error' >Поле для ввода почтового адреса(email) не должна быть пустой.</p>";
+                        $_SESSION["error_messages"] .= "<p class='mesage_error text-secondary' >Поле для ввода почтового адреса(email) не должна быть пустой.</p>";
 
                     //Возвращаем пользователя на страницу регистрации
                         header("HTTP/1.1 301 Moved Permanently");
@@ -109,7 +109,7 @@ $_SESSION["success_messages"] = '';
                 }else
                 {
                 // Сохраняем в сессию сообщение об ошибке. 
-                    $_SESSION["error_messages"] .= "<p class='mesage_error' >Отсутствует поле для ввода Email</p>";
+                    $_SESSION["error_messages"] .= "<p class='mesage_error text-secondary' >Отсутствует поле для ввода Email</p>";
 
                 //Возвращаем пользователя на страницу авторизации
                     header("HTTP/1.1 301 Moved Permanently");
@@ -136,7 +136,7 @@ $_SESSION["success_messages"] = '';
                     }else
                     {
                     // Сохраняем в сессию сообщение об ошибке. 
-                        $_SESSION["error_messages"] .= "<p class='mesage_error' >Укажите Ваш пароль</p>";
+                        $_SESSION["error_messages"] .= "<p class='mesage_error text-secondary' >Укажите Ваш пароль</p>";
 
                     //Возвращаем пользователя на страницу регистрации
                         header("HTTP/1.1 301 Moved Permanently");
@@ -149,7 +149,7 @@ $_SESSION["success_messages"] = '';
                 }else
                 {
                 // Сохраняем в сессию сообщение об ошибке. 
-                    $_SESSION["error_messages"] .= "<p class='mesage_error' >Отсутствует поле для ввода пароля</p>";
+                    $_SESSION["error_messages"] .= "<p class='mesage_error text-secondary' >Отсутствует поле для ввода пароля</p>";
 
                 //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
@@ -163,7 +163,7 @@ $_SESSION["success_messages"] = '';
                 $query_delete_users = $mysqli->query("DELETE FROM `users` WHERE `email_status` = 0 AND `date_registration` < ( NOW() - INTERVAL 1 DAY )");
                 if(!$query_delete_users)
                 {
-                    exit("<p><strong>Ошибка!</strong> Сбой при удалении просроченного аккаунта. Код ошибки: ".$mysqli->errno."</p>");
+                    exit("<p><strong>Ошибка!</strong>&nbsp; Сбой при удалении просроченного аккаунта. Код ошибки: ".$mysqli->errno."</p>");
                 }
 
 
@@ -171,7 +171,7 @@ $_SESSION["success_messages"] = '';
                 $query_delete_confirm_users = $mysqli->query("DELETE FROM `confirm_users` WHERE `date_registration` < ( NOW() - INTERVAL 1 DAY)");
                 if(!$query_delete_confirm_users)
                 {
-                    exit("<p><strong>Ошибка!</strong> Сбой при удалении просроченного аккаунта(confirm). Код ошибки: ".$mysqli->errno."</p>");
+                    exit("<p><strong>Ошибка!</strong>&nbsp; Сбой при удалении просроченного аккаунта(confirm). Код ошибки: ".$mysqli->errno."</p>");
                 }
 
             // (4) Место для составления запроса к БД
@@ -181,7 +181,7 @@ $_SESSION["success_messages"] = '';
                 if(!$result_query_select)
                 {
                 // Сохраняем в сессию сообщение об ошибке. 
-                    $_SESSION["error_messages"] .= "<p class='mesage_error' >Ошибка запроса на выборке пользователя из БД</p>";
+                    $_SESSION["error_messages"] .= "<p class='mesage_error text-secondary' >Ошибка запроса на выборке пользователя из БД</p>";
 
                 //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
@@ -205,8 +205,8 @@ $_SESSION["success_messages"] = '';
                             {
 
                             // Сохраняем в сессию сообщение об ошибке. 
-                                $_SESSION["error_messages"] = "<p class='mesage_error' >Вы зарегистрированы, но, Ваш почтовый адрес не подтверждён. Для подтверждения почты перейдите по ссылке из письма, которую получили после регистрации.</p>
-                                <p><strong>Внимание!</strong> Ссылка для подтверждения почты, действительна 24 часа с момента регистрации. Если Вы не подтвердите Ваш email в течении этого времени, то Ваш аккаунт будет удалён.</p>";
+                                $_SESSION["error_messages"] = "<p class='mesage_error text-secondary' ><span class='text-success'>Вы зарегистрированы,</span> но, Ваш почтовый адрес не подтверждён.<br> Для подтверждения почты перейдите по ссылке из письма, которую получили после регистрации.</p>
+                                <p><strong>Внимание!</strong>&nbsp; Ссылка для подтверждения почты, действительна 24 часа с момента регистрации. Если Вы не подтвердите Ваш email в течении этого времени, то Ваш аккаунт будет удалён.</p>";
 
 
                             //Возвращаем пользователя на страницу авторизации
@@ -240,7 +240,7 @@ $_SESSION["success_messages"] = '';
                     {
 
                     // Сохраняем в сессию сообщение об ошибке. 
-                        $_SESSION["error_messages"] .= "<p class='mesage_error' >Неправильный логин и/или пароль</p>";
+                        $_SESSION["error_messages"] .= "<p class='mesage_error text-secondary' >Неправильный логин и/или пароль</p>";
 
                     //Возвращаем пользователя на страницу авторизации
                         header("HTTP/1.1 301 Moved Permanently");
@@ -254,10 +254,10 @@ $_SESSION["success_messages"] = '';
             }else
             {
             //Если капча не передана
-                exit("<p><strong>Ошибка!</strong> Отсутствует проверочный код, то есть код капчи. Вы можете перейти на <a href=".$address_site."> главную страницу </a>.</p>");
+                exit("<p><strong>Ошибка!</strong>&nbsp; Отсутствует проверочный код, то есть код капчи. Вы можете перейти на <a href=".$address_site."> главную страницу </a>.</p>");
             }
 
         }else
         {
-            exit("<p><strong>Ошибка!</strong> Вы зашли на эту страницу напрямую, поэтому нет данных для обработки. Вы можете перейти на <a href=".$address_site."> главную страницу </a>.</p>");
+            exit("<p><strong>Ошибка!</strong>&nbsp; Вы зашли на эту страницу напрямую, поэтому нет данных для обработки. Вы можете перейти на <a href=".$address_site."> главную страницу </a>.</p>");
         }

@@ -6,14 +6,14 @@ require_once("dbconnect.php");
 if(isset($_GET['token']) && !empty($_GET['token'])){
     $token = $_GET['token'];
 }else{
-    exit("<p class="text-secondary text-center"><strong>Ошибка!</strong>&nbsp; Отсутствует проверочный код.</p>");
+    exit("<p class='text-secondary text-center'><strong>Ошибка!</strong>&nbsp; Отсутствует проверочный код.</p>");
 }
 
 //Проверяем, если существует переменная email в глобальном массиве GET
 if(isset($_GET['email']) && !empty($_GET['email'])){
     $email = $_GET['email'];
 }else{
-    exit("<p class="text-secondary text-center"><strong>Ошибка!</strong>&nbsp; Отсутствует адрес электронной почты.</p>");
+    exit("<p class='text-secondary text-center'><strong>Ошибка!</strong>&nbsp; Отсутствует адрес электронной почты.</p>");
 }
 
 //Делаем запрос на выборке токена из таблицы confirm_users
@@ -75,14 +75,14 @@ if(($row = $query_select_user->fetch_assoc()) != false){
         require_once("footer2.php");
 
     }else{
-        exit("<p class="text-secondary text-center"><strong>Ошибка!</strong>&nbsp; Неправильный проверочный код.</p>");
+        exit("<p class='text-secondary text-center'><strong>Ошибка!</strong>&nbsp; Неправильный проверочный код.</p>");
     }
 }else{
-    exit("<p class="text-secondary text-center"><strong>Ошибка!</strong>&nbsp; Такой пользователь не зарегистрирован </p>");
+    exit("<p class='text-secondary text-center'><strong>Ошибка!</strong>&nbsp; Такой пользователь не зарегистрирован </p>");
 }
 }else{
     //Иначе, если есть ошибки в запросе к БД
-    exit("<p class="text-secondary text-center"><strong>Ошибка!</strong>&nbsp; Сбой при выборе пользователя из БД. </p>");
+    exit("<p class='text-secondary text-center'><strong>Ошибка!</strong>&nbsp; Сбой при выборе пользователя из БД. </p>");
 }
 // Завершение запроса выбора пользователя из таблицы users
 $query_select_user->close();

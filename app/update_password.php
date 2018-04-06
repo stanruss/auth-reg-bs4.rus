@@ -16,7 +16,7 @@
 
 		}else{
 			// Сохраняем в сессию сообщение об ошибке. 
-			$_SESSION["error_messages"] = "<p class='mesage_error' ><strong>Ошибка!</strong> Отсутствует проверочный код ( Передаётся скрытно ).</p>";
+			$_SESSION["error_messages"] = "<p class='mesage_error text-secondary' ><strong>Ошибка!</strong>&nbsp; Отсутствует проверочный код ( Передаётся скрытно ).</p>";
 			
 			//Возвращаем пользователя на страницу установки нового пароля
 			header("HTTP/1.1 301 Moved Permanently");
@@ -31,7 +31,7 @@
 
 		}else{
 			// Сохраняем в сессию сообщение об ошибке. 
-			$_SESSION["error_messages"] = "<p class='mesage_error' ><strong>Ошибка!</strong> Отсутствует адрес электронной почты ( Передаётся скрытно ).</p>";
+			$_SESSION["error_messages"] = " <p class='mesage_error text-secondary' ><strong>Ошибка!</strong>&nbsp; Отсутствует адрес электронной почты ( Передаётся скрытно ).</p>";
 			
 			//Возвращаем пользователя на страницу установки нового пароля
 			header("HTTP/1.1 301 Moved Permanently");
@@ -49,7 +49,7 @@
 		        $confirm_password = trim($_POST["confirm_password"]);
 		        if($confirm_password != $password){
 		            // Сохраняем в сессию сообщение об ошибке. 
-		            $_SESSION["error_messages"] = "<p class='mesage_error' >Пароли не совпадают</p>";
+		            $_SESSION["error_messages"] = " <p class='mesage_error text-secondary' >Пароли не совпадают</p>";
 		            
 		            //Возвращаем пользователя на страницу установки нового пароля
 		            header("HTTP/1.1 301 Moved Permanently");
@@ -59,7 +59,7 @@
 		        }
 		    }else{
 		        // Сохраняем в сессию сообщение об ошибке. 
-		        $_SESSION["error_messages"] = "<p class='mesage_error' >Отсутствует поле для повторения пароля</p>";
+		        $_SESSION["error_messages"] = " <p class='mesage_error text-secondary' >Отсутствует поле для повторения пароля</p>";
 		        
 		        //Возвращаем пользователя на страницу установки нового пароля
 		        header("HTTP/1.1 301 Moved Permanently");
@@ -73,7 +73,7 @@
 		        $password = md5($password."top_secret"); 
 		    }else{
 		        // Сохраняем в сессию сообщение об ошибке. 
-		        $_SESSION["error_messages"] = "<p class='mesage_error' >Пароль не может быть пустым</p>";
+		        $_SESSION["error_messages"] = " <p class='mesage_error text-secondary' >Пароль не может быть пустым</p>";
 		        
 		        //Возвращаем пользователя на страницу установки нового пароля
 		        header("HTTP/1.1 301 Moved Permanently");
@@ -83,7 +83,7 @@
 		    }
 		}else{
 		    // Сохраняем в сессию сообщение об ошибке. 
-		    $_SESSION["error_messages"] = "<p class='mesage_error' >Отсутствует поле для ввода пароля</p>";
+		    $_SESSION["error_messages"] = " <p class='mesage_error text-secondary' >Отсутствует поле для ввода пароля</p>";
 		    
 		    //Возвращаем пользователя на страницу установки нового пароля
 		    header("HTTP/1.1 301 Moved Permanently");
@@ -99,7 +99,7 @@
 		if(!$query_update_password){
 
 		    // Сохраняем в сессию сообщение об ошибке. 
-		    $_SESSION["error_messages"] = "<p class='mesage_error' >Возникла ошибка при изменении пароля.</p><p><strong>Описание ошибки</strong>: ".$mysqli->error."</p>";
+		    $_SESSION["error_messages"] = " <p class='mesage_error text-secondary' >Возникла ошибка при изменении пароля.</p><p><strong>Описание ошибки</strong>: ".$mysqli->error."</p>";
 		    
 		    //Возвращаем пользователя на страницу установки нового пароля
 		    header("HTTP/1.1 301 Moved Permanently");
@@ -110,17 +110,17 @@
 
 		}else{
 			//Подключение шапки
-			require_once("header.php");
+			require_once("header2.php");
 
 			//Выводим сообщение о том, что пароль установлен успешно.
-			echo '<h1 class="success_message text_center">Пароль успешно изменён!</h1>';
-			echo '<p class="text_center">Теперь Вы можете войти в свой аккаунт.</p>';
+			echo '<h1 class="success_messages mt-4 text-success text-center">Пароль успешно изменён!</h1>';
+			echo '<p class="text-center">Теперь Вы можете войти в свой аккаунт.</p>';
 
 			//Подключение подвала
-            require_once("footer.php");
+            require_once("footer2.php");
 		}
 
 	}else{
-		exit("<p><strong>Ошибка!</strong> Вы зашли на эту страницу напрямую, поэтому нет данных для обработки. Вы можете перейти на <a href=".$address_site."> главную страницу </a>.</p>");
+		exit("<p class='mesage_error text-secondary'><strong>Ошибка!</strong>&nbsp; Вы зашли на эту страницу напрямую, поэтому нет данных для обработки. Вы можете перейти на <a href=".$address_site."> главную страницу </a>.</p>");
 	}
 ?>

@@ -18,7 +18,7 @@ if(isset($_GET['token']) && !empty($_GET['token']))
 }else
 {
 
-	exit("<p><strong>Ошибка!</strong> Отсутствует проверочный код.</p>");
+	exit("<p><strong>Ошибка!</strong>&nbsp; Отсутствует проверочный код.</p>");
 
 }
 
@@ -34,7 +34,7 @@ if(isset($_GET['email']) && !empty($_GET['email']))
 }else
 {
 
-	exit("<p><strong>Ошибка!</strong> Отсутствует адрес электронной почты.</p>");
+	exit("<p><strong>Ошибка!</strong>&nbsp; Отсутствует адрес электронной почты.</p>");
 
 }
 
@@ -47,7 +47,7 @@ $query_delete_users = $mysqli->query("DELETE FROM `users` WHERE `email_status` =
 if(!$query_delete_users)
 {
 
-	exit("<p><strong>Ошибка!</strong> Сбой при удалении просроченного аккаунта. Код ошибки: ".$mysqli->errno."</p>");
+	exit("<p><strong>Ошибка!</strong>&nbsp; Сбой при удалении просроченного аккаунта. Код ошибки: ".$mysqli->errno."</p>");
 
 }
 
@@ -62,7 +62,7 @@ $query_delete_confirm_users = $mysqli->query("DELETE FROM `confirm_users` WHERE 
 if(!$query_delete_confirm_users)
 {
 
-	exit("<p><strong>Ошибка!</strong> Сбой при удалении просроченного аккаунта(confirm). Код ошибки: ".$mysqli->errno."</p>");
+	exit("<p><strong>Ошибка!</strong>&nbsp; Сбой при удалении просроченного аккаунта(confirm). Код ошибки: ".$mysqli->errno."</p>");
 
 }
 
@@ -104,7 +104,7 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 			if(!$query_update_user)
 			{
 
-				exit("<p><strong>Ошибка!</strong> Сбой при обновлении статуса пользователя. Код ошибки: ".$mysqli->errno."</p>");
+				exit("<p><strong>Ошибка!</strong>&nbsp; Сбой при обновлении статуса пользователя. Код ошибки: ".$mysqli->errno."</p>");
 
 			}else
 			{
@@ -118,7 +118,7 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 				if(!$query_delete)
 				{
 
-					exit("<p><strong>Ошибка!</strong> Сбой при удалении данных пользователя из временной таблицы. Код ошибки: ".$mysqli->errno."</p>");
+					exit("<p><strong>Ошибка!</strong>&nbsp; Сбой при удалении данных пользователя из временной таблицы. Код ошибки: ".$mysqli->errno."</p>");
 
 				}else
 				{
@@ -133,9 +133,9 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 
                         //Выводим сообщение о том, что почта успешно подтверждена.
 
-					echo '<h1 class="success_message text_center">Почта успешно подтверждена!</h1>';
+					echo '<h1 class="text-success mt-4 text-center">Почта успешно подтверждена!</h1>';
 
-					echo '<p class="text_center">Теперь Вы можете войти в свой аккаунт.</p>';
+					echo '<p class="text-center">Теперь Вы можете войти в свой аккаунт.</p>';
 
 
 
@@ -168,7 +168,7 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 		}else
 		{
 
-			exit("<p><strong>Ошибка!</strong> Неправильный проверочный код.</p>");
+			exit("<p><strong>Ошибка!</strong>&nbsp; Неправильный проверочный код.</p>");
 
 		}
 
@@ -177,7 +177,7 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 	}else
 	{
 
-		exit("<p><strong>Ошибка!</strong> Такой пользователь не зарегистрирован </p>");
+		exit("<p><strong>Ошибка!</strong>&nbsp; Такой пользователь не зарегистрирован </p>");
 
 	}
 
@@ -187,7 +187,7 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 
     //Иначе, если есть ошибки в запросе к БД
 
-	exit("<p><strong>Ошибка!</strong> Сбой при выборе пользователя из БД. </p>");
+	exit("<p><strong>Ошибка!</strong>&nbsp; Сбой при выборе пользователя из БД. </p>");
 
 }
 

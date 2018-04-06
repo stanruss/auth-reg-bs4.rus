@@ -79,7 +79,7 @@ session_start();
 						<div class="col my-2">
 
 							<!-- Блок для вывода сообщений -->
-							<div class="block_for_messages text-secondary">
+							<div class="block_for_messages">
 								<?php
 								if(isset($_SESSION["error_messages"]) && !empty($_SESSION["error_messages"])){
 									echo $_SESSION["error_messages"];

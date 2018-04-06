@@ -70,7 +70,7 @@ session_start();
 			<div class="row">
 				<div class="col my-2">
 					<!-- Блок для вывода сообщений -->
-					<div class="block_for_messages text-secondary">
+					<div class="block_for_messages">
 						<?php
 		//Если в сессии существуют сообщения об ошибках, то выводим их
 						if(isset($_SESSION["error_messages"]) && !empty($_SESSION["error_messages"])){
