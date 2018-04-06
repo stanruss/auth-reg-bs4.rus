@@ -18,15 +18,15 @@
     
     <!-- Template Basic Images Start -->
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="../img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" href="app/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/img/favicon/apple-touch-icon-180x180.png">
     <!-- Template Basic Images End -->
     
     <!-- Custom Browsers Color Start -->
     <meta name="theme-color" content="#000">
     <!-- Custom Browsers Color End -->
 
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="app/css/main.min.css">
 
 </head>
 
@@ -46,17 +46,17 @@
         // если нет, то выводим блок со ссылками на страницу регистрации и авторизации
                         ?>
                         <div class="nav-item">
-                            <a class="nav-link" href="form_register.php">Регистрация </a>
+                            <a class="nav-link" href="app/form_register.php">Регистрация </a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="form_auth.php">Авторизация</a>
+                            <a class="nav-link" href="app/form_auth.php">Авторизация</a>
                         </div>
                         <?php
                     }else{
     //Если пользователь авторизован, то выводим ссылку Выход
                         ?>  
                         <div id="link_logout">
-                            <a href="logout.php">Выход</a>
+                            <a href="app/logout.php">Выход</a>
                         </div>
                         <?php
                     }

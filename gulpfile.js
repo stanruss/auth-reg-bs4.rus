@@ -15,7 +15,7 @@ var gulp          = require('gulp'),
 gulp.task('browser-sync', function() {
 	browsersync({
 		proxy: {
-    target: "http://auth-reg-bs4.rus/app",
+    target: "http://auth-reg-bs4.rus/",
 },
 		notify: false,
 		// open: false,

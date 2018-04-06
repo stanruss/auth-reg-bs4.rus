@@ -127,7 +127,7 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 
                     //Подключение шапки
 
-					require_once("header.php");
+					require_once("header2.php");
 
 
 
@@ -141,7 +141,7 @@ if(($row = $query_select_user->fetch_assoc()) != false)
 
                     //Подключение подвала
 
-					require_once("footer.php");
+					require_once("footer2.php");
 
 
 

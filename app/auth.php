@@ -225,7 +225,7 @@ $_SESSION["success_messages"] = '';
 
                             //Возвращаем пользователя на главную страницу
                                 header("HTTP/1.1 301 Moved Permanently");
-                                header("Location: ".$address_site."index.php");
+                                header("Location: /index.php");
 
                             //Останавливаем скрипт
                                 exit();
