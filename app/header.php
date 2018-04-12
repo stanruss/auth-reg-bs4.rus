@@ -30,10 +30,10 @@ session_start();
 
 </head>
 
-<body class="text-dark">
+<body class="header-1 text-dark">
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-			<a class="navbar-brand" href="/">Navbar</a>
+		<nav class="navbar fixed-top navbar-expand-md navbar-dark">
+			<a class="navbar-brand" href="/"><img class="mr-1" src="app/img/Logo.png" alt="">Rusalut</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -69,11 +69,13 @@ session_start();
 		if(!isset($_SESSION['email']) && !isset($_SESSION['password'])){
 		// если нет, то выводим блок со ссылками на страницу регистрации и авторизации
 			?>
+			
 			<div class="container">
 				<div class="row col">
 не зарегестрирован
 				</div>
-			</div>	
+			</div>
+			
 			<?php
 					}else{
 	//Если пользователь авторизован, то выводим ссылку Выход
