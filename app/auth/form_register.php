@@ -18,22 +18,22 @@ session_start();
 
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="../img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
 
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="../css/main.min.css">
 
 </head>
 
 <body class="text-dark">
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-			<a class="navbar-brand" href="/"><img class="mr-4" src="img/Logo.png" alt="">Rusalut</a>
+			<a class="navbar-brand" href="/"><img class="mr-4" src="../img/Logo.png" alt="">Rusalut</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -176,7 +176,7 @@ session_start();
 </div>
 </div>
 </div>   
-<script src="js/scripts.min.js"></script>
+<script src="../js/scripts.min.js"></script>
 
 </body>
 </html>

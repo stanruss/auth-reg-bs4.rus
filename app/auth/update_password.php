@@ -20,7 +20,7 @@
 			
 			//Возвращаем пользователя на страницу установки нового пароля
 			header("HTTP/1.1 301 Moved Permanently");
-			header("Location: ".$address_site."set_new_password.php?email=$email&token=$token");
+			header("Location: ".$address_site."auth/set_new_password.php?email=$email&token=$token");
 			//Останавливаем  скрипт
 			exit();
 		}
@@ -35,7 +35,7 @@
 			
 			//Возвращаем пользователя на страницу установки нового пароля
 			header("HTTP/1.1 301 Moved Permanently");
-			header("Location: ".$address_site."set_new_password.php?email=$email&token=$token");
+			header("Location: ".$address_site."auth/set_new_password.php?email=$email&token=$token");
 			//Останавливаем  скрипт
 			exit();
 		}
@@ -53,7 +53,7 @@
 		            
 		            //Возвращаем пользователя на страницу установки нового пароля
 		            header("HTTP/1.1 301 Moved Permanently");
-		            header("Location: ".$address_site."set_new_password.php?email=$email&token=$token");
+		            header("Location: ".$address_site."auth/set_new_password.php?email=$email&token=$token");
 		            //Останавливаем  скрипт
 		            exit();
 		        }
@@ -63,7 +63,7 @@
 		        
 		        //Возвращаем пользователя на страницу установки нового пароля
 		        header("HTTP/1.1 301 Moved Permanently");
-		        header("Location: ".$address_site."set_new_password.php?email=$email&token=$token");
+		        header("Location: ".$address_site."auth/set_new_password.php?email=$email&token=$token");
 		        //Останавливаем  скрипт
 		        exit();
 		    }
@@ -77,7 +77,7 @@
 		        
 		        //Возвращаем пользователя на страницу установки нового пароля
 		        header("HTTP/1.1 301 Moved Permanently");
-		        header("Location: ".$address_site."set_new_password.php?email=$email&token=$token");
+		        header("Location: ".$address_site."auth/set_new_password.php?email=$email&token=$token");
 		        //Останавливаем  скрипт
 		        exit();
 		    }
@@ -87,7 +87,7 @@
 		    
 		    //Возвращаем пользователя на страницу установки нового пароля
 		    header("HTTP/1.1 301 Moved Permanently");
-		    header("Location: ".$address_site."set_new_password.php?email=$email&token=$token");
+		    header("Location: ".$address_site."auth/set_new_password.php?email=$email&token=$token");
 		    //Останавливаем  скрипт
 		    exit();
 		}
@@ -103,7 +103,7 @@
 		    
 		    //Возвращаем пользователя на страницу установки нового пароля
 		    header("HTTP/1.1 301 Moved Permanently");
-		    header("Location: ".$address_site."set_new_password.php?email=$email&token=$token");
+		    header("Location: ".$address_site."auth/set_new_password.php?email=$email&token=$token");
 		    
 		    //Останавливаем  скрипт
 		    exit();

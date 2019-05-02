@@ -13,7 +13,7 @@
     $c = imageColorAllocate($im, 255, 255, 255);
 
     // Записываем полученное случайное число на изображение
-    imageTtfText($im, 20, -10, 10, 30, $c, "fonts/verdana.ttf", $rand);
+    imageTtfText($im, 20, -10, 10, 30, $c, "../fonts/verdana.ttf", $rand);
 
     header("Content-type: image/png");
 

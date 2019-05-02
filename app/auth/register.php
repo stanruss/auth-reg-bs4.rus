@@ -33,7 +33,7 @@
 
                 //Возвращаем пользователя на страницу регистрации
                 header("HTTP/1.1 301 Moved Permanently");
-                header("Location: ".$address_site."form_register.php");
+                header("Location: ".$address_site."auth/form_register.php");
 
                 //Останавливаем скрипт
                 exit();
@@ -58,7 +58,7 @@
 
                     //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
-                    header("Location: ".$address_site."form_register.php");
+                    header("Location: ".$address_site."auth/form_register.php");
 
                     //Останавливаем скрипт
                     exit();
@@ -71,7 +71,7 @@
 
                 //Возвращаем пользователя на страницу регистрации
                 header("HTTP/1.1 301 Moved Permanently");
-                header("Location: ".$address_site."form_register.php");
+                header("Location: ".$address_site."auth/form_register.php");
 
                 //Останавливаем скрипт
                 exit();
@@ -93,7 +93,7 @@
                     
                     //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
-                    header("Location: ".$address_site."form_register.php");
+                    header("Location: ".$address_site."auth/form_register.php");
 
                     //Останавливаем  скрипт
                     exit();
@@ -107,7 +107,7 @@
                 
                 //Возвращаем пользователя на страницу регистрации
                 header("HTTP/1.1 301 Moved Permanently");
-                header("Location: ".$address_site."form_register.php");
+                header("Location: ".$address_site."auth/form_register.php");
 
                 //Останавливаем  скрипт
                 exit();
@@ -136,7 +136,7 @@
                         
                         //Возвращаем пользователя на страницу регистрации
                         header("HTTP/1.1 301 Moved Permanently");
-                        header("Location: ".$address_site."form_register.php");
+                        header("Location: ".$address_site."auth/form_register.php");
 
                         //Останавливаем  скрипт
                         exit();
@@ -156,7 +156,7 @@
                                 
                                 //Возвращаем пользователя на страницу регистрации
                                 header("HTTP/1.1 301 Moved Permanently");
-                                header("Location: ".$address_site."form_register.php");
+                                header("Location: ".$address_site."auth/form_register.php");
                             
                         }else{
                             // Сохраняем в сессию сообщение об ошибке. 
@@ -164,7 +164,7 @@
                             
                             //Возвращаем пользователя на страницу регистрации
                             header("HTTP/1.1 301 Moved Permanently");
-                            header("Location: ".$address_site."form_register.php");
+                            header("Location: ".$address_site."auth/form_register.php");
                         }
 
                         /* закрытие выборки */
@@ -182,7 +182,7 @@
                     
                     //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
-                    header("Location: ".$address_site."form_register.php");
+                    header("Location: ".$address_site."auth/form_register.php");
 
                     //Останавливаем  скрипт
                     exit();
@@ -194,7 +194,7 @@
                 
                 //Возвращаем пользователя на страницу регистрации
                 header("HTTP/1.1 301 Moved Permanently");
-                header("Location: ".$address_site."form_register.php");
+                header("Location: ".$address_site."auth/form_register.php");
 
                 //Останавливаем  скрипт
                 exit();
@@ -217,7 +217,7 @@
                         
                         //Возвращаем пользователя на страницу регистрации
                         header("HTTP/1.1 301 Moved Permanently");
-                        header("Location: ".$address_site."form_register.php");
+                        header("Location: ".$address_site."auth/form_register.php");
 
                         //Останавливаем  скрипт
                         exit();
@@ -229,7 +229,7 @@
                     
                     //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
-                    header("Location: ".$address_site."form_register.php");
+                    header("Location: ".$address_site."auth/form_register.php");
 
                     //Останавливаем  скрипт
                     exit();
@@ -246,7 +246,7 @@
                     
                     //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
-                    header("Location: ".$address_site."form_register.php");
+                    header("Location: ".$address_site."auth/form_register.php");
 
                     //Останавливаем  скрипт
                     exit();
@@ -258,7 +258,7 @@
                 
                 //Возвращаем пользователя на страницу регистрации
                 header("HTTP/1.1 301 Moved Permanently");
-                header("Location: ".$address_site."form_register.php");
+                header("Location: ".$address_site."auth/form_register.php");
 
                 //Останавливаем  скрипт
                 exit();
@@ -282,7 +282,7 @@
                 
                 //Возвращаем пользователя на страницу регистрации
                 header("HTTP/1.1 301 Moved Permanently");
-                header("Location: ".$address_site."form_register.php");
+                header("Location: ".$address_site."auth/form_register.php");
 
                 //Останавливаем  скрипт
                 exit();
@@ -306,7 +306,7 @@
                     
                     //Возвращаем пользователя на страницу регистрации
                     header("HTTP/1.1 301 Moved Permanently");
-                    header("Location: ".$address_site."form_register.php");
+                    header("Location: ".$address_site."auth/form_register.php");
 
                     //Останавливаем  скрипт
                     exit();
@@ -319,7 +319,7 @@
                     $subject = "=?utf-8?B?".base64_encode($subject)."?=";
 
                     //Составляем тело сообщения
-                    $message = 'Здравствуйте! <br/> <br/> Сегодня '.date("d.m.Y", time()).', неким пользователем была произведена регистрация на сайте <a href="'.$address_site.'">'.$_SERVER['HTTP_HOST'].'</a> используя Ваш email. Если это были Вы, то, пожалуйста, подтвердите адрес вашей электронной почты, перейдя по этой ссылке: <a href="'.$address_site.'activation.php?token='.$token.'&email='.$email.'">'.$address_site.'activation/'.$token.'</a> <br/> <br/> В противном случае, если это были не Вы, то, просто игнорируйте это письмо. <br/> <br/> <strong>Внимание!</strong> Ссылка действительна 24 часа. После чего Ваш аккаунт будет удален из базы.';
+                    $message = 'Здравствуйте! <br/> <br/> Сегодня '.date("d.m.Y", time()).', неким пользователем была произведена регистрация на сайте <a href="'.$address_site.'">'.$_SERVER['HTTP_HOST'].'</a> используя Ваш email. Если это были Вы, то, пожалуйста, подтвердите адрес вашей электронной почты, перейдя по этой ссылке: <a href="'.$address_site.'auth/activation.php?token='.$token.'&email='.$email.'">'.$address_site.'activation/'.$token.'</a> <br/> <br/> В противном случае, если это были не Вы, то, просто игнорируйте это письмо. <br/> <br/> <strong>Внимание!</strong> Ссылка действительна 24 часа. После чего Ваш аккаунт будет удален из базы.';
                     
                     //Составляем дополнительные заголовки для почтового сервиса mail.ru
                     //Переменная $email_admin, объявлена в файле dbconnect.php
@@ -331,7 +331,7 @@
 
                         //Отправляем пользователя на страницу регистрации и убираем форму регистрации
                         header("HTTP/1.1 301 Moved Permanently");
-                        header("Location: ".$address_site."form_register.php?hidden_form=1");
+                        header("Location: ".$address_site."auth/form_register.php?hidden_form=1");
                         exit();
 
                     }else{
@@ -351,7 +351,7 @@
 
             //Отправляем пользователя на страницу регистрации
             header("HTTP/1.1 301 Moved Permanently");
-            header("Location: ".$address_site."form_register.php");
+            header("Location: ".$address_site."auth/form_register.php");
 
             exit();
             

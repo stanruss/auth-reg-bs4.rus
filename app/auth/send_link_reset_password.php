@@ -34,7 +34,7 @@
 		            
 		            //Возвращаем пользователя на страницу восстановления пароля
 		            header("HTTP/1.1 301 Moved Permanently");
-		            header("Location: ".$address_site."reset_password.php");
+		            header("Location: ".$address_site."auth/reset_password.php");
 		            //Останавливаем скрипт
 		            exit();
 		        }
@@ -45,7 +45,7 @@
 
 		        //Возвращаем пользователя на страницу восстановления пароля
 		        header("HTTP/1.1 301 Moved Permanently");
-		        header("Location: ".$address_site."reset_password.php");
+		        header("Location: ".$address_site."auth/reset_password.php");
 		        //Останавливаем скрипт
 		        exit();
 		    }
@@ -71,7 +71,7 @@
 		                
 		                //Возвращаем пользователя на страницу восстановления пароля
 		                header("HTTP/1.1 301 Moved Permanently");
-		                header("Location: ".$address_site."reset_password.php");
+		                header("Location: ".$address_site."auth/reset_password.php");
 
 		                //Останавливаем скрипт
 		                exit();
@@ -82,7 +82,7 @@
 		            
 		            //Возвращаем пользователя на страницу восстановления пароля
 		            header("HTTP/1.1 301 Moved Permanently");
-		            header("Location: ".$address_site."reset_password.php");
+		            header("Location: ".$address_site."auth/reset_password.php");
 		            //Останавливаем скрипт
 		            exit();
 		        }
@@ -93,7 +93,7 @@
 		        
 		        //Возвращаем пользователя на страницу восстановления пароля
 		        header("HTTP/1.1 301 Moved Permanently");
-		        header("Location: ".$address_site."reset_password.php");
+		        header("Location: ".$address_site."auth/reset_password.php");
 
 		        //Останавливаем скрипт
 		        exit();
@@ -111,7 +111,7 @@
 		        
 		        //Возвращаем пользователя на страницу восстановления пароля
 		        header("HTTP/1.1 301 Moved Permanently");
-		        header("Location: ".$address_site."reset_password.php");
+		        header("Location: ".$address_site."auth/reset_password.php");
 
 		        //Останавливаем скрипт
 		        exit();
@@ -134,7 +134,7 @@
 		        	    	
 		        	    	//Возвращаем пользователя на страницу восстановления пароля
 		        	    	header("HTTP/1.1 301 Moved Permanently");
-		        	    	header("Location: ".$address_site."reset_password.php");
+		        	    	header("Location: ".$address_site."auth/reset_password.php");
 
 		        	    	//Останавливаем скрипт
 		        	    	exit();
@@ -153,7 +153,7 @@
 		        	    	    
 		        	    	    //Возвращаем пользователя на страницу восстановления пароля
 		        	    	    header("HTTP/1.1 301 Moved Permanently");
-		        	    	    header("Location: ".$address_site."reset_password.php");
+		        	    	    header("Location: ".$address_site."auth/reset_password.php");
 
 		        	    	    //Останавливаем  скрипт
 		        	    	    exit();
@@ -161,7 +161,7 @@
 		        	    	}else{
 
 			        	    	//Составляем ссылку на страницу установки нового пароля.
-			        	    	$link_reset_password = $address_site."set_new_password.php?email=$email&token=$token";
+			        	    	$link_reset_password = $address_site."auth/set_new_password.php?email=$email&token=$token";
 
 	                             //Составляем заголовок письма
 	                             $subject = "Восстановление пароля от сайта ".$_SERVER['HTTP_HOST'];
@@ -183,7 +183,7 @@
 
 	                                 //Отправляем пользователя на страницу восстановления пароля и убираем форму для ввода email
 	                                 header("HTTP/1.1 301 Moved Permanently");
-	                                 header("Location: ".$address_site."form_auth.php");
+	                                 header("Location: ".$address_site."auth/form_auth.php");
 
 	                                 exit();
 
@@ -192,7 +192,7 @@
 
 	                                 //Возвращаем пользователя на страницу восстановления пароля
 	                                 header("HTTP/1.1 301 Moved Permanently");
-	                                 header("Location: ".$address_site."reset_password.php");
+	                                 header("Location: ".$address_site."auth/reset_password.php");
 	                                 
 	                                 //Останавливаем скрипт
 	                                 exit();
@@ -209,7 +209,7 @@
 		            
 		            //Возвращаем пользователя на страницу восстановления пароля
 		            header("HTTP/1.1 301 Moved Permanently");
-		            header("Location: ".$address_site."reset_password.php");
+		            header("Location: ".$address_site."auth/reset_password.php");
 
 		            //Останавливаем скрипт
 		            exit();
