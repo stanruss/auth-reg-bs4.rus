@@ -170,7 +170,7 @@
 	                             $subject = "=?utf-8?B?".base64_encode($subject)."?=";
 
 	                             //Составляем тело сообщения
-	                             $message = 'Здравствуйте! <br/> <br/> Для восстановления пароля от сайта <a href="http://'.$_SERVER['HTTP_HOST'].'"> '.$_SERVER['HTTP_HOST'].' </a>, перейдите по этой <a href="'.$link_reset_password.'">ссылке</a>.';
+	                             $message = 'Здравствуйте! <br/> <br/> Для восстановления пароля от сайта <a href="http://'.$_SERVER['HTTP_HOST'].'"> '.$_SERVER['HTTP_HOST'].' </a>, перейдите по этой <a href="'.$_SERVER['HTTP_HOST'].''.$link_reset_password.'">ссылке</a>.';
 	                             
 	                             //Составляем дополнительные заголовки для почтового сервиса mail.ru
 	                             //Переменная $email_admin, объявлена в файле dbconnect.php
@@ -179,7 +179,7 @@
 	                             //Отправляем сообщение с ссылкой на страницу установки нового пароля и проверяем отправлена ли она успешно или нет. 
 	                             if(mail($email, $subject, $message, $headers)){
 
-	                                 $_SESSION["success_messages"] = "<p class='success_message text-success'>Ссылка на страницу установки нового пароля пароля, была отправлена на указанный E-mail ($email) </p>";
+	                                 $_SESSION["success_messages"] = "<p class='success_message text-success'>Ссылка на страницу установки нового пароля была отправлена на указанный E-mail ($email) </p>";
 
 	                                 //Отправляем пользователя на страницу восстановления пароля и убираем форму для ввода email
 	                                 header("HTTP/1.1 301 Moved Permanently");

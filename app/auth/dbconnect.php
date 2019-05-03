@@ -3,9 +3,9 @@
     header('Content-Type: text/html; charset=utf-8');
 
     $server = "localhost"; /* имя хоста (уточняется у провайдера), если работаем на локальном сервере, то указываем localhost */
-    $username = "root"; /* u0343395_stanrus */
-    $password = "818791"; /* stan818791 */
-    $database = "auth-reg"; /* u0343395_u034339 */
+    $username = "root"; /* u0529961_default */ /* root */
+    $password = "818791"; /* pr1_8NQA */ /* 818791 */
+    $database = "auth-reg"; /* u0529961_default */ /* auth-reg */
  
     // Подключение к базе данных через MySQLi
     $mysqli = new mysqli($server, $username, $password, $database);
